@@ -1,0 +1,19 @@
+# The below code is a practice in using list comprehension to streamline code for a case converter program.
+
+
+def convert_to_snake_case(pascal_or_camel_cased_string):
+
+    snake_cased_char_list = [
+        "_" + char.lower() if char.isupper() else char
+        for char in pascal_or_camel_cased_string
+    ]
+
+    return "".join(snake_cased_char_list).strip("_")
+
+
+def main():
+    print(convert_to_snake_case("IAmAPascalCasedString"))
+
+
+if __name__ == "__main__":
+    main()
